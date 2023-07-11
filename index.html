@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+    <link rel="text/css" href="./index-css.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="./index-js.js"></script>
+</head>
+<body>
+    
+    <!--======================= 文章列表頁面 =======================-->
+    <div id="home-page">
+        <div class="btn-group">
+            <button class="bg-dark js-filter" data-type="全部">全部</button>
+            <button class="bg-blue js-filter" data-type="新聞">新聞</button>
+            <button class="bg-red js-filter" data-type="愛情">愛情</button>
+            <button class="bg-purple js-filter" data-type="八卦">八卦</button>
+            <button class="bg-orange js-filter" data-type="購物">購物</button>
+            <button class="bg-yellow js-filter" data-type="笑話">笑話</button>
+            <button class="bg-cyan js-filter" data-type="閒聊">閒聊</button>
+            <button class="bg-cyan js-filter" data-type="其他">其他</button>
+            <button class="bg-dark float-right js-show-form-page">發文</button>
+        </div>
+        <div id="post-list">
+            <div class="post-item card" data-id="123">
+                <h3><span class="tag bg-orange">文章類型</span>文章標題</h3>
+                <p>文章內容文章內容文章內容文章內容文章內容文章內容文章內容文章內容文章內容......</p>
+                <span class="gray">2020-11-12</span>
+            </div>
+            <div class="post-item card" data-id="456">
+                <h3><span class="tag bg-orange">文章類型</span>文章標題</h3>
+                <p>文章內容文章內容文章內容文章內容文章內容文章內容文章內容文章內容文章內容......</p>
+                <span class="gray">2020-11-12</span>
+            </div>
+            <div class="post-item card" data-id="7">
+                <h3><span class="tag bg-orange">文章類型</span>文章標題</h3>
+                <p>文章內容文章內容文章內容文章內容文章內容文章內容文章內容文章內容文章內容......</p>
+                <span class="gray">2020-11-12</span>
+            </div>
+        </div>
+        <h3 class="text-center" id="bottom-text">底部</h3>
+    </div>
+    
+    
+    <!--======================= 新增文章頁面 =======================-->
+    <div id="form-page">
+        <div class="card">
+            <select id="form-type">
+                <option value="">請選擇文章類型</option>
+                <option value="新聞">新聞</option>
+                <option value="愛情">愛情</option>
+                <option value="八卦">八卦</option>
+                <option value="購物">購物</option>
+                <option value="笑話">笑話</option>
+                <option value="閒聊">閒聊</option>
+                <option value="其他">其他</option>
+            </select>
+            <input id="form-title" type="text" placeholder="文章標題...">
+            <textarea id="form-content" rows="8" cols="40" placeholder="文章內容 (必須滿 20 字以上)..."></textarea>
+        </div>
+        <div class="btn-group">
+            <button class="bg-gray js-show-post-list">取消</button> 
+            <button class="bg-orange js-create-post">送出</button>
+        </div>
+    </div>
+    
+    
+    <!--======================= 文章檢視頁面 =======================-->
+    <div id="post-page">
+        <div class="btn-group">
+            <button class="bg-orange js-show-post-list">返回文章列表</button>
+        </div>
+        
+        <div class="postItem card">
+            <h3>
+                <span class="tag bg-orange" id="post-type">類型</span>
+                <span id="post-title"></span>
+                (<span id="post-author">作者</span>)
+            </h3>
+            <p id="post-content">文章內容文章內容文章內容....</p>
+            <span id="post-date">2020-01-01</span>
+        </div>
+        
+        <h3 class="text-center" id="comment-length"> 20 則留言</h3>
+        
+        <div class="card">
+            <input type="text" id="comment-input">
+            <button class="bg-orange js-create-comment">留言</button>
+        </div>
+        
+        <div id="comment-list">
+            <div class="comment-item card">
+                <strong>小明</strong>
+                <span>留言內容留言內容留言內容...</span>
+                <span class="float-right gray">2020-01-01</span>
+            </div>
+            <div class="comment-item card">
+                <strong>Tony</strong>
+                <span>blabalba</span>
+                <span class="float-right gray">2020-11-12</span>
+            </div>
+            <div class="comment-item card">
+                <strong>小明</strong>
+                <span>留言內容留言內容留言內容...</span>
+                <span class="float-right gray">2020-01-01</span>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
